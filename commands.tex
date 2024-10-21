@@ -1,0 +1,80 @@
+% SETUP hyperref
+\hypersetup{
+    colorlinks = true,
+    linkcolor = red,
+    anchorcolor = red,
+    citecolor = red,
+    filecolor = red,
+    urlcolor = red
+}
+
+\renewcommand{\algorithmautorefname}{Algorithm}
+
+% DEFINE ALGORITHM KEYWORDS
+\SetKwComment{Comment}{/* }{ */}
+\SetKw{Continue}{continue}
+\SetKw{Break}{break}
+ 
+% SETUP FIGURE PATH
+\graphicspath{{fig/}}
+
+% DEFINE COLORS
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\colorlet{bgcolor}{yellow!6}
+\colorlet{highlightcolor}{red!16}
+\definecolor{yetanothergreen}{RGB}{112, 173, 71}
+\definecolor{yetanotherred}{RGB}{192, 0, 0}
+\definecolor{maroon}{cmyk}{0,0.87,0.68,0.32}
+
+% DEFINE USEFUL COMMANDS
+\newcommand{\nop}[1]{}
+\newcommand{\itembf}[1]{\item \textbf{#1}}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\newenvironment{packeditemize}{
+%{ Tiny bullets: \tiny \textbullet}
+\begin{list}{$\bullet$}{
+\setlength{\itemsep}{1.5pt}
+\setlength{\labelwidth}{8pt}
+\setlength{\leftmargin}{10pt}
+\setlength{\labelsep}{3pt}
+\setlength{\listparindent}{\parindent}
+\setlength{\parsep}{1.5pt}
+\setlength{\parskip}{1.5pt}
+\setlength{\topsep}{1.5pt}}
+}{\end{list}}
+
+\newenvironment{packeditemizev2}{
+%{ Tiny bullets: \tiny \textbullet}
+\begin{list}{$\bullet$}{
+\setlength{\itemsep}{1.5pt}
+\setlength{\labelwidth}{8pt}
+\setlength{\leftmargin}{10pt}
+\setlength{\labelsep}{3pt}
+\setlength{\listparindent}{\parindent}
+\setlength{\parsep}{3pt}
+\setlength{\parskip}{3pt}
+\setlength{\topsep}{3pt}}
+}{\end{list}}
+
+% \setlength{\bibsep}{1mm}
+
+\newtcolorbox[%
+auto counter]{mybox}[2][]{%
+	enhanced jigsaw,
+        colback=yellow!12,
+	breakable,
+	#1}
+\newtcolorbox[%
+auto counter]{rqbox}[2][]{%
+	enhanced jigsaw,
+        colback=white!12,
+	breakable,
+	#1} 
+
+\newcommand\featuretext[1]{
+  \llap{\vrule width.35pt height2pt depth2.5pt\kern1pt}%
+  \rlap{\rotatebox{40}{\textbf{#1}}}%
+}
+\newcommand{\cmark}{{\color{yetanothergreen}{\ding{51}}}}
+\newcommand{\xmark}{{\color{yetanotherred}{\ding{55}}}}
+

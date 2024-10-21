@@ -1,0 +1,43 @@
+\documentclass[10pt,letterpaper,twocolumn]{article}
+
+% include packages
+\input{packages}
+
+% some commands
+\input{commands}
+
+% system name
+\newcommand{\sys}{{\textsc{{AES}}}\xspace}
+
+% ADD AUTHOR NOTES HERE
+\newcommand{\authnote}[4]{{\bf[\textcolor{#2}{#1}: \textcolor{#4}{#3}]}}
+\newcommand{\FOO}[1]{\authnote{FOO}{red}{#1}{blue}}
+
+% title
+\title{AES-Academic Encryption Scheme}
+
+\author{}
+
+\begin{document}
+
+\maketitle
+\input{abstract}
+\input{introduction}
+\input{background}
+\input{overview}
+\input{design}
+\input{implementation}
+\input{evaluation}
+\input{discussion}
+\input{relatedwork}
+\input{conclusion}
+\input{acknowledgments}
+
+\bibliographystyle{plain}
+\bibliography{reference}
+
+\begin{appendix}
+\input{appendix}
+\end{appendix}
+
+\end{document}
